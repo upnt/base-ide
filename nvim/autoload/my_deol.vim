@@ -1,7 +1,6 @@
 function! my_deol#options() abort
     let g:deol#custom_map = {
                 \ 'edit': 'e',
-                \ 'split': 'floating',
                 \ 'start_insert': 'i',
                 \ 'start_insert_first': 'I',
                 \ 'start_append': 'a',
@@ -14,7 +13,9 @@ function! my_deol#options() abort
                 \ 'quit': 'q',
                 \ }
 
-
-    let g:deol#extra_options = {'term_finish': 'close'}
+    let g:deol#extra_options = {
+                \'term_finish': 'close',
+                \'split': 'floating'
+                \ }
 	let g:deol#prompt_pattern = '% \|%$'
 endfunction

@@ -1,7 +1,7 @@
 " mapping
 let mapleader= "\<Space>" " for plugin mappings
 inoremap<silent> jj <ESC>
-tnoremap<silent> jj <C-\><C-n>'
+tnoremap<silent> jj <C-\><C-n>
 nmap <Esc><Esc> :nohlsearch<CR>
 
 " encording
@@ -29,6 +29,7 @@ set clipboard=unnamed
 set shell=bash
 set belloff=all
 set autochdir
+set pumblend=10
 
 " plugin settings
 if &compatible

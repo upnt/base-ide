@@ -1,4 +1,17 @@
-function! my_denite#settings() abort
+function! my_denite#options() abort
+let s:denite_win_width_percent = 0.85
+let s:denite_win_height_percent = 0.7
+
+call denite#custom#option('default', {
+    \ 'split': 'floating',
+    \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
+    \ 'wincol': float2nr((&columns - (&columns * s:denite_win_width_percent)) / 2),
+    \ 'winheight': float2nr(&lines * s:denite_win_height_percent),
+    \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
+    \ })
+endfunction
+
+function! my_denite#mappings() abort
     nnoremap <silent><buffer><expr> l
     \ denite#do_map('do_action')
     nnoremap <silent><buffer><expr> d
