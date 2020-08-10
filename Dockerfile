@@ -17,8 +17,9 @@ RUN apk update && \
     sh ./installer.sh ~/.cache/dein && \
 # install plugins
     nvim -c "call dein#install()" -c UpdateRemotePlugins -c q! && \
-    chmod u+x /usr/local/bin && \
+    chmod u+x /usr/local/bin/* && \
 # remove
     rm ./installer.sh && \
     apk del --purge .builddeps 
 
+ENTRYPOINT ["nvim"]

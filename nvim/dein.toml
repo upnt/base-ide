@@ -6,6 +6,10 @@ call my_deol#options()
 augroup My_Deol
     au FileType deol set winblend=10
 augroup END
+
+if argc()==0 || argc()==1 && isdirectory(argv()[0])
+    au vimenter * Deol
+endif
 '''
 
 # file explorer
@@ -42,9 +46,6 @@ augroup My_Defx
     au!
     au FileType defx call my_defx#settings()
 
-if argc()==0 || argc()==1 && isdirectory(argv()[0])
-    au vimenter * Defx
-endif
 augroup END
 '''
 
