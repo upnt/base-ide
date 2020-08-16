@@ -51,7 +51,7 @@ esac
 PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
 PS1="$PS1"'\n'                 # new line
 
-PS1="$PS1"'\[\033[37;47m\]'    # change to purple;green
+PS1="$PS1"'\[\033[36;47m\]'    # change to purple;green
 PS1="$PS1"'  \u '                 # current working directory
 PS1="$PS1"'\[\033[37;42m\]'    # change to green
 PS1="$PS1"$'\ue0b0'            # separator
