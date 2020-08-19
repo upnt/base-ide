@@ -1,5 +1,5 @@
 # base-ide
-This does not support now.
+This is not supported now.
 
 add plugins which are necessary for all languages to upnt/docvim
 
